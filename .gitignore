@@ -1,0 +1,7 @@
+__pycache__
+myenv/
+input/
+output/
+.env
+.langchain.db
+hydraq-chat-history.json
