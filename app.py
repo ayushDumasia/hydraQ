@@ -1,8 +1,11 @@
 from flask import Flask, jsonify, request, Response
-
-from chatbot.chat_utils import fetchChatHistory, chatWithChain
+from flask_cors import CORS
+from chatbot.chat_utils import fetchChatHistory,chatWithChain
 
 app = Flask(__name__)
+
+CORS(app)
+
 
 @app.route("/chat/<session_id>", methods = ['GET', 'POST'])
 def disp(session_id):
